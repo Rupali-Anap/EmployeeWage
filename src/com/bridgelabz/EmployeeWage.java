@@ -51,7 +51,6 @@ public class EmployeeWage {
         System.out.println("");
         System.out.println("Employee work for total days is " + empWorkingDays );
         System.out.println("Employee works for total hours is " + totalEmpHrs );
-      //  System.out.println("Total salary of the employee after " + WORKING_DAYS_PER_MONTH + " days is : " + totalWage);
         System.out.println("total salary after working day" +WORKING_DAYS_PER_MONTH+ " is " +totalWage);
     }
 
