@@ -9,23 +9,23 @@ public class EmployeeWage {
     static final int MAX_WORKING_HOUR = 100;
     static final int WORKING_DAYS_PER_MONTH = 20;
 
-    public static void main(String[] args) {
-        System.out.println("Welcome to Employee Wages Program");
+     void computeEmployeewage() {
 
         int totalWorkingDays = 1;
         int totalWage = 0;
-        int empWorkingDays=0;
+        int empWorkingDays = 0;
         int totalEmpHrs = 0;
+
 
         while (totalEmpHrs <= MAX_WORKING_HOUR && totalWorkingDays <= WORKING_DAYS_PER_MONTH) {
 
-            int empCheck=(int) (Math.random()*3);
+            int empCheck = (int) (Math.random() * 3);
             int dailyWage = 0;
 
             switch (empCheck) {
                 case IS_FULL_TIME: {
                     System.out.println("Employee is Present full time on day " + totalWorkingDays);
-                    dailyWage  = WAGE_PER_HOUR * FULL_DAY_HOUR;
+                    dailyWage = WAGE_PER_HOUR * FULL_DAY_HOUR;
                     totalWage += dailyWage;
                     System.out.println("Total wage after day " + totalWorkingDays + " is : " + totalWage + "\n");
                     totalEmpHrs = totalEmpHrs + FULL_DAY_HOUR;
@@ -38,7 +38,7 @@ public class EmployeeWage {
                     totalWage += dailyWage;
                     System.out.println("Total wage after day " + totalWorkingDays + " is : " + totalWage + "\n");
                     totalEmpHrs = totalEmpHrs + PART_TIME_HOUR;
-                    empWorkingDays +=1;
+                    empWorkingDays += 1;
                     break;
                 }
                 default:
@@ -49,14 +49,18 @@ public class EmployeeWage {
         }
 
         System.out.println("");
-        System.out.println("Employee work for total days is " + empWorkingDays );
-        System.out.println("Employee works for total hours is " + totalEmpHrs );
-      //  System.out.println("Total salary of the employee after " + WORKING_DAYS_PER_MONTH + " days is : " + totalWage);
-        System.out.println("total salary after working day" +WORKING_DAYS_PER_MONTH+ " is " +totalWage);
+        System.out.println("Employee work for total days is " + empWorkingDays);
+        System.out.println("Employee works for total hours is " + totalEmpHrs);
+        System.out.println("Total salary after working day" + WORKING_DAYS_PER_MONTH + " is " + totalWage);
     }
 
-}
+    public static void main(String[] args) {
+         EmployeeWage employeeWage= new EmployeeWage();
+         System.out.println("Welcome to Employee Wages Program");
+         employeeWage.computeEmployeewage();
 
+    }
+}
 
 
 
